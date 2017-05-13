@@ -34,15 +34,25 @@ $ git rebase --continue
 
 :speech_balloon: Scenario: if we want to rebase the changes on remote
 
-First, we need to synchronize the reference on GitHub (Can't use `git pull` because we are ahead of master branch)
+Before the operation, it's always recommended to synchronize the reference on GitHub, and then see the logs first
 
 ```bash
 # fetch is a non-destructive command that simply updates the reference between remote and local
 $ git fetch origin master
+
+# see the logs
+$ git log --all --oneline --graph --decorate
 ```
 
 To keep the local commits ahead of the commits on GitHub, in order that we can benefit from the changes on GitHub
 
 ```bash
 $ git pull --rebase origin master
+
+# on the other hand, we can merge it by git pull
+$ git pull origin master
+
+# which is equal to
+$ git fetch origin mater
+$ git merge origin/master
 ```
