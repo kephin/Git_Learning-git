@@ -1,6 +1,6 @@
 # Rebasing
 
-### :wrench: Rebase other bransh
+### :wrench: Rebase other branch
 
 :speech_balloon: Scenario: we are currently on the feature / bug branch, if we want to incorporate any changes that have happened on master, we will need to rebase the master
 
